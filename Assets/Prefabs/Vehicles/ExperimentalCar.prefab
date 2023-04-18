@@ -266,6 +266,7 @@ GameObject:
   - component: {fileID: 1565383429937773865}
   - component: {fileID: 1696073162896815338}
   - component: {fileID: 5117213054998877715}
+  - component: {fileID: 7023069084488457129}
   m_Layer: 0
   m_Name: ExperimentalCar
   m_TagString: Untagged
@@ -322,6 +323,22 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7023069084488457129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2229997885717047187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9e383a8028987b4eb3c067368782b37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wheelColliderFL: {fileID: 555606543287039565}
+  _wheelColliderFR: {fileID: 3658793803797922584}
+  _wheelColliderRL: {fileID: 9012323891191469797}
+  _wheelColliderRR: {fileID: 6941794783294239938}
 --- !u!1 &2263127032806044257
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,6 +349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6524313243197487413}
   - component: {fileID: 6824260888980203965}
+  - component: {fileID: 9012323891191469797}
   m_Layer: 0
   m_Name: Wheel_RL
   m_TagString: Untagged
@@ -372,18 +390,30 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 0.15
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.7
+    m_AsymptoteValue: 0.6
+    m_Stiffness: 1.1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.11
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 0
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 0
+    m_AsymptoteValue: 0.7
+    m_Stiffness: 1.1
   m_Enabled: 1
+--- !u!114 &9012323891191469797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263127032806044257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d431dfea64c964aaa842a38d9bee7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2361829477617306129
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7995987164354388024}
   - component: {fileID: 9183285673321059193}
+  - component: {fileID: 6941794783294239938}
   m_Layer: 0
   m_Name: Wheel_RR
   m_TagString: Untagged
@@ -470,18 +501,30 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 0.15
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.7
+    m_AsymptoteValue: 0.6
+    m_Stiffness: 1.1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.11
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 0
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 0
+    m_AsymptoteValue: 0.7
+    m_Stiffness: 1.1
   m_Enabled: 1
+--- !u!114 &6941794783294239938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3852729895641135833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d431dfea64c964aaa842a38d9bee7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4279338874166223853
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5455940923575808335}
   - component: {fileID: 2953267362247651958}
+  - component: {fileID: 555606543287039565}
   m_Layer: 0
   m_Name: Wheel_FL
   m_TagString: Untagged
@@ -532,18 +576,30 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 0.15
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.7
+    m_AsymptoteValue: 0.7
+    m_Stiffness: 1.1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.11
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 0
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 0
+    m_AsymptoteValue: 0.7
+    m_Stiffness: 1.1
   m_Enabled: 1
+--- !u!114 &555606543287039565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4279338874166223853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d431dfea64c964aaa842a38d9bee7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6604226410234301457
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7645390457684984588}
   - component: {fileID: 7955013446773804779}
+  - component: {fileID: 3658793803797922584}
   m_Layer: 0
   m_Name: Wheel_FR
   m_TagString: Untagged
@@ -762,15 +819,27 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 0.15
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.7
+    m_AsymptoteValue: 0.7
+    m_Stiffness: 1.1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.11
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 0
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 0
+    m_AsymptoteValue: 0.7
+    m_Stiffness: 1.1
   m_Enabled: 1
+--- !u!114 &3658793803797922584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8258280612362639536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d431dfea64c964aaa842a38d9bee7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

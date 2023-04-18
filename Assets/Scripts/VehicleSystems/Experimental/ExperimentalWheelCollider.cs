@@ -6,6 +6,9 @@ namespace VehicleSystems.Experimental
     [RequireComponent(typeof(WheelCollider))]
     public class ExperimentalWheelCollider : MonoBehaviour
     {
+        public float MotorTorque { get; set; } = 0.0f;
+        public float RPM { get; private set; } = 0.0f;
+
         private WheelCollider _wheelCollider = default;
         private Rigidbody _rigidbody = default;
 
@@ -19,6 +22,12 @@ namespace VehicleSystems.Experimental
             {
                 Debug.LogWarning("ExperimentalWheelCollider requires an attached Rigidbody to function.");
             }
+        }
+
+        private void FixedUpdate()
+        {
+            RPM = _wheelCollider.rpm;
+            _wheelCollider.motorTorque = MotorTorque;
         }
 
         private WheelCollider GetWheelCollider()
