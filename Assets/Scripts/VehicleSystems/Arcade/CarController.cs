@@ -68,7 +68,7 @@ namespace VehicleSystems.Arcade
 
             float frictionAngle = (-Vector3.Angle(transform.up, Vector3.up) / 90.0f) + 1.0f;
 
-            m_Rigidbody.AddForce(transform.right * frictionValue * frictionAngle * 100f * -m_CarVelocity.normalized.x);
+           //m_Rigidbody.AddForce(transform.right * frictionValue * frictionAngle * 100f * -m_CarVelocity.normalized.x);
 
             m_Rigidbody.AddForce(m_Rigidbody.mass * 9.81f * m_Rigidbody.transform.forward * InputManager.Instance.InputThrottle);
         }
